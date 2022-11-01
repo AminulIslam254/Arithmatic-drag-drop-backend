@@ -2,7 +2,7 @@ const mongoose=require('mongoose');
 
 exports.connectMongoose=()=>{
     mongoose
-        .connect("mongodb://localhost:27017/Assignment1")
+        .connect("mongodb+srv://aminul123:kagune<password>@arithmatic-drag-drop.asr6wqb.mongodb.net/?retryWrites=true&w=majority")
         .then((e)=>console.log(`Database connected at ${e.connection.host}`))
         .catch((e)=>console.log(e));
 };
