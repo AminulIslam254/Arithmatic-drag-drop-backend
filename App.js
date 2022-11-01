@@ -20,6 +20,18 @@ app.get("/", (req, res) => {
   res.send("This is home page");
 })
 
+app.get("/read",(req,res)=>{
+  User.find({},(err,result)=>{
+    if(err){
+      res.send(err);
+    }
+    else{
+      res.send(result);
+    }
+  });
+      
+});
+
 
 
 
