@@ -21,15 +21,13 @@ app.get("/", (req, res) => {
 })
 
 app.get("/read",(req,res)=>{
-  User.find({},(err,result)=>{
-    if(err){
-      res.send(err);
-    }
-    else{
-      res.send(result);
-    }
-  });
-      
+  User.find()
+      .then((result) => {
+        res.send(result)
+      })
+      .catch((err) => {
+        res.send(err);
+      })
 });
 
 
